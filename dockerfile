@@ -1,7 +1,3 @@
-FROM ubuntu
-RUN touch file1 file2 aws
-HELLO THIS IS EXTRA DATA WE ARE ADDING TO THIS FILE
-ADDING SOME MORE CONTENT
-THIS IS JENKINS CLASS, THANKS FOR JOINING
-475683973023@#$%^&*()
-ADDING SOME NEW CONTENT BY DEV-4
+FROM tomcat:8.0.20-jre8
+COPY tomcat-users.xml /usr/local/tomcat/conf
+COPY target/*.war /usr/local/tomcat/webapps/myweb.war
